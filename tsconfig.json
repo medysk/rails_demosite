@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es6", "dom"],
+    "module": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react",
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": { "@/*": ["./frontend/src/*"] },
+    "outDir": "./frontend/dist",
+    "rootDir": "./frontend/src",
+    "strict": true,
+    "removeComments": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["frontend/src/**/*"],
+  "exclude": ["**/*.spec.ts", "node_modules", "vendor", "public"],
+  "compileOnSave": false
+}

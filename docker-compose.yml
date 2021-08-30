@@ -2,7 +2,6 @@ version: '3.8'
 services:
   db:
     image: mariadb:10.5
-    restart: always
     ports:
       - "3306:3306"
     environment:
@@ -16,7 +15,6 @@ services:
 
   adminer:
     image: adminer
-    restart: always
     ports:
       - 8080:8080
     depends_on:
