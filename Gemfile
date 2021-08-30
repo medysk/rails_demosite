@@ -26,12 +26,30 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'devise'
+gem 'hamlit-rails'
+gem 'pagy'
+gem 'rails_admin'
+gem 'rails-i18n'
+gem 'react-rails'
+gem 'seed-fu'
+gem 'whenever', require: false
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-end
 
-gem 'react-rails'
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'pry-byebug'
+  gem 'rexml'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers', require: false
+  gem 'turnip'
+  gem 'vcr', require: false
+  gem 'webdrivers'
+  gem 'webmock', require: false
+end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -43,6 +61,10 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'erb2haml'
+  gem 'listen', '~> 3.3'
+  gem 'rack-mini-profiler', '~> 2.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
