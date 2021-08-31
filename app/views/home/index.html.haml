@@ -1,0 +1,23 @@
+%header
+  %nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    .container.px-5
+      = link_to 'Rails test', root_path, class: 'navbar-brand'
+      %button.navbar-toggler{type: "button",
+        'data-bs-toggle' => "collapse",
+        'data-bs-target' => "#navbarSupportedContent",
+        'aria-controls' => "navbarSupportedContent",
+        'aria-expanded' => "false",
+        'aria-label' => "Toggle navigation"}
+        %span.navbar-toggler-icon
+      .collapse.navbar-collapse.collapse#navbarSupportedContent
+        %ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+          %li.nav-item
+            = link_to 'dummy1', root_path, class: 'nav-link'
+          %li.nav-item
+            = link_to 'dummy2', root_path, class: 'nav-link'
+
+.container.px-4.px-lg-5
+  .row.gx-4.gx-lg-5.align-items-center.my-5
+    %h1.font-weight-light Home
+    %p
+      Home画面です
