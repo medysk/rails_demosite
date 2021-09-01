@@ -23,7 +23,9 @@ module.exports = function (api) {
           targets: {
             node: 'current',
           },
+          modules: 'commonjs',
         },
+        '@babel/preset-react',
       ],
       (isProductionEnv || isDevelopmentEnv) && [
         '@babel/preset-env',
@@ -33,6 +35,13 @@ module.exports = function (api) {
           corejs: 3,
           modules: false,
           exclude: ['transform-typeof-symbol'],
+        },
+      ],
+      [
+        '@babel/preset-react',
+        {
+          development: isDevelopmentEnv || isTestEnv,
+          useBuiltIns: true,
         },
       ],
       ['@babel/preset-typescript', { allExtensions: true, isTSX: true }],
@@ -55,21 +64,11 @@ module.exports = function (api) {
         },
       ],
       [
-        '@babel/plugin-proposal-private-methods',
-        {
-          loose: true,
-        },
-      ],
-      [
-        '@babel/plugin-proposal-private-property-in-object',
-        {
-          loose: true,
-        },
-      ],
-      [
         '@babel/plugin-transform-runtime',
         {
           helpers: false,
+          regenerator: true,
+          corejs: false,
         },
       ],
       [
