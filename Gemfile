@@ -63,6 +63,10 @@ group :development do
   gem 'spring'
 
   gem 'erb2haml'
+  gem 'rubocop'
+  gem 'rubocop-rails'
+  gem 'solargraph'
+  gem 'yard'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
